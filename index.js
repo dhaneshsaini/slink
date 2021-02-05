@@ -20,22 +20,17 @@ let cinp = () => {
   res = res[0]["l"]
   let data = res;
 
-
   if (data != null) {
     return false;
 
   } else if (data == null) {
     return true;
-
   }
-
-
 };
 
 let geturl = () => {
   let url = document.getElementById("urlinput").value;
   return url;
-
 };
 
 let getrandom = () => {
@@ -53,7 +48,6 @@ let genhash = () => {
     check_is_unique();
   } else {
     window.location.hash = document.getElementById("custominput").value;
-
   }
 };
 
@@ -65,8 +59,6 @@ let check_is_unique = () => {
   if (data != null) {
     genhash();
   }
-
-
 };
 
 let copyer = (containerid) => {
@@ -121,7 +113,6 @@ let shorturl = () => {
     if (document.getElementById("custominput").value == "") {
       genhash();
       send_request(longurl);
-
     } else {
       if (cre.test(document.getElementById("custominput").value)) {
         if (cinp()) {
@@ -146,15 +137,4 @@ let shorturl = () => {
 };
 document.getElementById("sbtn").addEventListener("click", shorturl);
 
-console.log(`
-
-███████╗ ██████╗ ███████╗███████╗██╗   ██╗██████╗ ██╗     
-██╔════╝██╔═══██╗██╔════╝██╔════╝██║   ██║██╔══██╗██║     
-█████╗  ██║   ██║███████╗███████╗██║   ██║██████╔╝██║     
-██╔══╝  ██║   ██║╚════██║╚════██║██║   ██║██╔══██╗██║     
-██║     ╚██████╔╝███████║███████║╚██████╔╝██║  ██║███████╗
-╚═╝      ╚═════╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-                                                                                                                               
-PLEASE DON'T TYPE ANYTHING BELLOW UNLESS YOU ARE A DEVELOPER!
-
-`)
+console.log('urlShortener')
